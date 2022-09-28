@@ -1,0 +1,155 @@
+
+
+.title, .command, #score, summary {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: rgb(102, 96, 90);
+}
+
+body{
+  background-color: rgb(194, 185, 171)
+}
+
+h2{
+  text-align: center;
+  border-bottom : double 7px rgb(154, 145, 134);
+  padding:4px;
+  width : 50%;
+  margin : auto;
+  margin-top : 70px;
+  margin-bottom : 30px;
+  color : rgb(102, 96, 90);
+  font-weight: 600;
+}
+
+summary{
+  margin-bottom: 10px;
+  background-color: rgb(231, 226, 221);
+  width: fit-content;
+  margin: 0px;
+  margin:auto;
+  padding:1px;
+  padding-left : 10px;
+  padding-right: 10px;
+  font-weight : 380;
+  font-size: 14.5px;
+  border-radius: 3px;
+}
+
+details{
+  text-align: center;
+  
+}
+
+.command{
+  margin:auto;
+  margin-bottom : 30px;
+  text-align: center;
+}
+
+::placeholder{
+  font-weight: 300;
+  color : rgb(163, 156, 143);
+}
+
+#comm{
+  border: none;
+  width: 200px;
+  height : 20px;
+  border-radius: 3px;
+  padding : 3px;
+  color :rgb(154, 145, 134);
+  margin-right: 3px;
+  background-color: whitesmoke;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+#enter{
+  height : 25px;
+  border : none;
+  border-radius: 3px;
+  color : rgb(154, 145, 134);
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+}
+
+
+#app{
+  background-color: whitesmoke;
+  text-align: center;
+  width : 50%;
+  border-radius: 10px;
+  padding : 30px;
+  margin : auto;
+  margin-bottom: 30px;
+  color :rgb(97, 85, 71);
+}
+
+#score{
+  background-color: rgb(154, 145, 134);
+  color:whitesmoke;
+  margin : 10px;
+  text-align: center;
+  padding : 3px;
+  border-radius: 10px;
+  width: 50%;
+  margin : auto;
+}
+
+p{
+  padding : 10px;
+  margin : 0px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+.rule{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: lighter;
+  color: rgb(102, 96, 90);
+}
+
+.rule_ex{
+  font-size: 12px;
+  width : 50%;
+  text-align: left;
+  margin:auto;
+  line-height: 23px;
+  padding-left : 30px;
+  font-weight:350;
+}
+
+span{
+  background-color: rgb(182, 172, 162);
+  margin-right: 7px;
+  padding-left : 4px;
+  font-weight : 400;
+}
+
+ul{
+  text-align: center;
+}
+
+h5{
+  padding-left : 5px;
+  padding-right : 5px;
+  font-weight: 450;
+  background-color: rgb(231, 226, 221);
+  width:fit-content;
+  margin:0px;
+  margin:auto;
+  margin-top: 20px;
+  
+}
+
+#enter:hover {
+  color: whitesmoke;
+  background-color: rgb(154, 145, 134);
+}
+
+summary:hover, summary:focus{
+  background-color: rgb(154, 145, 134);
+  color : whitesmoke;
+
+}

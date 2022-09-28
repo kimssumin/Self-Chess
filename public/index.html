@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="title">
+    <h2> ♘ Chess Game ♘ </h2>
+  </div>
+  
+  <div class="command">
+    <input type="text" name="comm" id="comm" placeholder= "명령어를 입력하세요 ex) A7->A6">
+    <input type = "button" id = "enter" value="Enter">
+  </div>
+
+  <details>
+    <summary>Game Rules</summary>
+    <div class = "rule">
+      <h5>✔ 명령어 모음</h5>
+      <div class = "rule_ex">
+        &nbsp<br>
+        <span>A2->A3&nbsp;&nbsp;</span>| &nbsp;A2 에서 A3 으로 이동<br>
+        <span>?A2&nbsp;&nbsp;</span>| &nbsp;A2가 이동가능한 좌표를 보여줌<br>
+        <span>init {key} {value}&nbsp;&nbsp;</span>| &nbsp;board 가 초기화된 상태에서, error 가 난 경우 수동적으로 key를 배치<br>
+        <span>set {key} {position} {color}&nbsp;&nbsp;</span>| &nbsp;color의 key를 원하는 position 에 둠 (빈칸일 경우에만 놓을 수 있음)<br>
+        <span>display&nbsp;&nbsp;</span>| &nbsp; board를 출력<br>
+        <span>possible {position}&nbsp;&nbsp;</span>| &nbsp;position에 위치한 key의 이동가능한 경우를 모두 출력<br>
+      </div>
+      <h5>✔ 실행규칙</h5>
+      <div class="rule_ex">
+        &nbsp<br>
+        <span>1&nbsp&nbsp</span>백말부터 시작합니다<br>
+        <span>2&nbsp&nbsp</span>순서가 아닌 말을 이동하려 하면 경고창이 뜹니다<br>
+        <span>3&nbsp&nbsp</span>일반적인 체스 룰과 다르게 이동할 수 있는 경로에 말이 있을 때 상대 말을 제거하고 점수를 획득합니다<br>
+        <span>4&nbsp&nbsp</span>일반적인 체스와 다르게 킹의 역할이 없습니다 (체크메이트, 체크... X)<br>
+        <span>5&nbsp&nbsp</span>핀은 1점, 룩은 5점, 비숍과 나이트는 3점, 퀸은 9점으로 점수를 산정하는데,<br>
+        현재 보드판에 놓인 체스말들의 점수 합으로 전체 점수를 계산합니다
+
+      </div>
+    </div>
+  </details><br />
+
+
+  <div id="app"></div>
+  <div id = "score"></div>
+  <script  type="module" src = "../src/main.js" charset="UTF-8"></script>
+</body>
+</html>
