@@ -38,6 +38,14 @@ console.log(score_total(board_i))
 
 let next = "w";
 
+let input = document.getElementById("comm");
+input.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("enter").click();
+      }
+    });
+
 document.querySelector('#enter').addEventListener('click', function(event){
   let keyword = document.getElementById('comm').value;
   //console.log(prompt)
