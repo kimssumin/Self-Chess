@@ -1,3 +1,3 @@
 # Self-Chess
 [Chrome 환경]
-https://kimssumin.github.io/Self-Chess/public/index.html
+https://kimssumin.github.io/Self-Chess-game/public/index.html
