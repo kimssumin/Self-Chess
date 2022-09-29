@@ -1,6 +1,6 @@
-# Self-Chess
+# Self-Chess-game
 
-## <a href="https://kimssumin.github.io/Self-Chess-game/public/index.html">[Click]🎮 Let's play chess game!</a>
+## <a href="https://kimssumin.github.io/Self-Chess-game/public/index.html">🎮 [Click] Let's play chess game!</a>
 
 
 ## Browser support
@@ -9,7 +9,7 @@
 
 ## Directory Structure
 
-<details>
+<details open="true">
   <summary>Click to toggle</summary>
   <pre>📦 /
 ┣ 📂public
