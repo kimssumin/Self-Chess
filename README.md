@@ -1,7 +1,6 @@
 # Self-Chess
 
-## Let's play chess game
-<a href="https://kimssumin.github.io/Self-Chess-game/public/index.html">🎮 Go to homepage !</a>
+## <a href="https://kimssumin.github.io/Self-Chess-game/public/index.html">[Click]🎮 Let's play chess game!</a>
 
 
 ## Browser support
