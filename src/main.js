@@ -40,7 +40,7 @@ let next = "w";
 
 let input = document.getElementById("comm");
 input.addEventListener("keyup", function (event) {
-      if (event.keyCode === 13) {
+      if (event.key === 'Enter') {
         event.preventDefault();
         document.getElementById("enter").click();
       }
