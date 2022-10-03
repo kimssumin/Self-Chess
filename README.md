@@ -1,10 +1,5 @@
 # Self-Chess-game
 
-## 🏷 Index
-  0. [Checklist](#Browser support)
-
-## <a href="https://kimssumin.github.io/Self-Chess-game/public/index.html">🎮 [Click] Let's play chess game!</a>
-
 
 ## Browser support
 
