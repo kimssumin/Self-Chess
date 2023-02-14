@@ -49,12 +49,13 @@ input.addEventListener("keyup", function (event) {
 document.querySelector('#enter').addEventListener('click', function(event){
   let keyword = document.getElementById('comm').value;
   //console.log(prompt)
+  keyword = keyword.toUpperCase();
   console.log(keyword)
   if (keyword == ""){
     alert("명령을 입력하세요") //enter 치면 실행 멈춤
   }
 
-  else if (keyword.startsWith("init")){
+  else if (keyword.toLowerCase().startsWith("init")){
     let c = keyword.split(" ");
     let key = c[1];
     let value = c[2];
@@ -78,7 +79,7 @@ document.querySelector('#enter').addEventListener('click', function(event){
     console.log(score_total(boards))
   }
 
-  else if (keyword.startsWith("set")){
+  else if (keyword.toLowerCase().startsWith("set")){
     let c = keyword.split(" ");
     let key = c[1];
     let value = c[2];
@@ -109,7 +110,7 @@ document.querySelector('#enter').addEventListener('click', function(event){
 
 
 
-  else if (keyword.startsWith("display")){
+  else if (keyword.toLowerCase().startsWith("display")){
     let boards = chess.display();
     app.innerHTML = "&nbsp&nbsp&nbsp;A&nbsp&nbspB&nbsp&nbspC&nbsp&nbspD&nbsp&nbspE&nbsp&nbspF&nbsp&nbspG&nbsp&nbspH<br>";
     boards.forEach((i,idx) => {
@@ -213,7 +214,7 @@ document.querySelector('#enter').addEventListener('click', function(event){
     }
   }
 
-  else if (keyword.startsWith('possible')){
+  else if (keyword.toLowerCase().startsWith('possible')){
     let c = keyword.split(" ")[1];
     let str_ = chess.check_what(c);
     alert(str_)
