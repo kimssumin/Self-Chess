@@ -158,12 +158,13 @@ export class program {
           }
 
           this.boards[to_row][to_col] = chess_key;
+          let removekey = this.boards[from_row][from_col];
           this.boards[from_row][from_col] = "0x2573";
           
           //let app = document.querySelector('#app');
           //app.insertAdjacentHTML("beforeend", '[SCORE] : '+score_total(this.boards)+'<br>')
           console.log('[SCORE]')
-          console.log(score_total(this.boards))
+          console.log(score_total(this.boards, removekey))
           console.log(" ")
           return true
         }
@@ -196,11 +197,12 @@ export class program {
           //   //상대 pawn 먹기
             
           // }
-
+          
           this.boards[to_row][to_col] = chess_key;
+          let removekey = this.boards[from_row][from_col];
           this.boards[from_row][from_col] = "0x2573";
           console.log('[SCORE]')
-          console.log(score_total(this.boards))
+          console.log(score_total(this.boards, removekey))
           console.log(" ")
           return true
         }

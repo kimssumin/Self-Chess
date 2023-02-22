@@ -1,10 +1,9 @@
-// import {program} from "./board.js"
 
 // const score_board = new program();
 // const boards = score_board.boards;
 const white = ['0x2656','0x2658','0x2657','0x2659', '0x2655'];
 const black = ['0x265C', '0x265E' ,'0x265D', '0x265B', '0x265F'];
-
+const scores = {'black' : 0, 'white' : 0};
 
 
 
@@ -26,8 +25,24 @@ const check = (key) => {
   }
 }
 
-export const score_total = (board) => {
-  let scores = {'black' : 0, 'white' : 0 };
+export const score_init = () =>{
+  scores = {'black' : 0, 'white' : 0 };
+  return scores
+}
+
+export const score_total = (board, removekey) => {
+  if (white.includes(removekey)){
+    scores['white'] += check(removekey);
+  }
+  else if (black.includes(removekey)){
+    scores['black'] += check(removekey);
+  }
+
+
+  return scores
+}
+
+/*
   board.forEach(i => {
     i.forEach((ii, index) =>{
       if (white.includes(ii)){ //흰색말이면
@@ -38,5 +53,4 @@ export const score_total = (board) => {
       }
     }) 
   });
-  return scores
-}
+  */
