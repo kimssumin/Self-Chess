@@ -48,6 +48,13 @@ input2.addEventListener("keyup", function (event) {
       }
     });
 
+document.querySelector('#possible').addEventListener('click', function (event){
+  let keywordStart = input.value;
+  let str_ = chess.check_what(keywordStart);
+  alert(str_)
+  console.log(str_)
+})
+
 document.querySelector('#enter').addEventListener('click', function(event){
   let keywordStart = input.value;
   let keywordEnd = input2.value;
@@ -76,13 +83,6 @@ document.querySelector('#enter').addEventListener('click', function(event){
         console.log("흑색 체크말의 차례입니다.")
       }
     }
-  }
-
-  else if (keyword.toLowerCase().startsWith('possible')){
-    let c = keyword.split(" ")[1];
-    let str_ = chess.check_what(c);
-    alert(str_)
-    console.log(str_)
   }
   
   else {
