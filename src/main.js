@@ -60,30 +60,15 @@ document.querySelector('#enter').addEventListener('click', function(event){
   let keywordEnd = input2.value;
   let keyword = input.value;
   //console.log(prompt)
+  keywordStart = keywordStart.toUpperCase();
+  keywordEnd = keywordEnd.toUpperCase();
   keyword = keyword.toUpperCase();
   console.log(keyword)
   if (keywordStart == "" || keywordEnd == ""){
     alert("명령을 입력하세요") //enter 치면 실행 멈춤
   }
 
-  else if (keywordStart.startsWith("?")){
-    let c = keywordStart.split("?")[1];
-    if (chess.check_next(c, next)){ //true 일때
-      let str_ = chess.check_what(c);
-      alert(str_)
-      console.log(str_)
-    }
-    else{
-      if (next == "w"){
-        alert("백색 체스말의 차례입니다.")
-        console.log("백색 체스말의 차례입니다.")
-      }
-      else{
-        alert("흑색 체크말의 차례입니다.")
-        console.log("흑색 체크말의 차례입니다.")
-      }
-    }
-  }
+  
   
   else {
     let origin = keywordStart;
@@ -156,6 +141,27 @@ document.querySelector('#enter').addEventListener('click', function(event){
 
 
 /*
+
+else if (keywordStart.startsWith("?")){
+    let c = keywordStart.split("?")[1];
+    if (chess.check_next(c, next)){ //true 일때
+      let str_ = chess.check_what(c);
+      alert(str_)
+      console.log(str_)
+    }
+    else{
+      if (next == "w"){
+        alert("백색 체스말의 차례입니다.")
+        console.log("백색 체스말의 차례입니다.")
+      }
+      else{
+        alert("흑색 체크말의 차례입니다.")
+        console.log("흑색 체크말의 차례입니다.")
+      }
+    }
+  }
+
+
 else if (keyword.toLowerCase().startsWith("init")){
     let c = keyword.split(" ");
     let key = c[1];

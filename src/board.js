@@ -141,6 +141,9 @@ export class program {
           if (chess_key === "0x2659" && to_row === 0){ ////pawn이 0행에 도달시 queen으로
             chess_key = "0x2655"
           }
+          else if (chess_key === "0x2659" && Math.abs(to_row-from_row) + Math.abs(to_col - from_col) == 2 && to_row !== 0){
+            return false;
+          }
           this.boards[to_row][to_col] = chess_key;
           this.boards[from_row][from_col] = "0x2573";
           
@@ -173,6 +176,9 @@ export class program {
           if (chess_key === "0x265F" && to_row === 7){ //pawn이 0행에 도달시 queen으로
             chess_key = "0x265B"
           }
+          else if (chess_key === "0x265F" && Math.abs(to_row-from_row) + Math.abs(to_col - from_col) == 2 && to_row !== 0){
+            return false;
+          }
 
           this.boards[to_row][to_col] = chess_key;
           this.boards[from_row][from_col] = "0x2573";
@@ -185,6 +191,11 @@ export class program {
           if (chess_key === "0x265F" && to_row === 7){ //pawn이 0행에 도달시 queen으로
             chess_key = "0x265B"
           }
+
+          // else if (chess_key === "0x265F" && to_row !== 7){
+          //   //상대 pawn 먹기
+            
+          // }
 
           this.boards[to_row][to_col] = chess_key;
           this.boards[from_row][from_col] = "0x2573";
@@ -258,6 +269,7 @@ export class program {
         return true
       }
       else{
+        console.log(ii, next, row, col);
         return false
       }
     }
