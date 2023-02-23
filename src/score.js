@@ -32,10 +32,10 @@ export const score_init = () =>{
 
 export const score_total = (board, removekey) => {
   if (white.includes(removekey)){
-    scores['white'] += check(removekey);
+    scores['black'] += check(removekey);
   }
   else if (black.includes(removekey)){
-    scores['black'] += check(removekey);
+    scores['white'] += check(removekey);
   }
 
 

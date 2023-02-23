@@ -156,9 +156,9 @@ export class program {
           if (chess_key === "0x2659" && to_row === 0){ //pawn이 0행에 도달시 queen으로
             chess_key = "0x2655"
           }
-
+          
+          let removekey = this.boards[to_row][to_col];
           this.boards[to_row][to_col] = chess_key;
-          let removekey = this.boards[from_row][from_col];
           this.boards[from_row][from_col] = "0x2573";
           
           //let app = document.querySelector('#app');
@@ -197,9 +197,8 @@ export class program {
           //   //상대 pawn 먹기
             
           // }
-          
+          let removekey = this.boards[to_row][to_col];
           this.boards[to_row][to_col] = chess_key;
-          let removekey = this.boards[from_row][from_col];
           this.boards[from_row][from_col] = "0x2573";
           console.log('[SCORE]')
           console.log(score_total(this.boards, removekey))
